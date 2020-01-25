@@ -17,6 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "aot": true,
             "outputPath": "dist/countries-web",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -53,6 +54,10 @@
                   "type": "initial",
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
                 }
               ]
             }
@@ -126,5 +131,8 @@
       }
     }
   },
-  "defaultProject": "countries-web"
+  "defaultProject": "countries-web",
+  "cli": {
+    "analytics": "cf215162-5c32-4d3c-b3dc-0f45ec07efd7"
+  }
 }
