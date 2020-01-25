@@ -1,0 +1,28 @@
+<div class="pagination-wrapper">
+  <ul class="pagination" *ngIf="pages.length">
+    <li
+      class="page-item"
+      [ngClass]="{ disabled: currentPage === 1 }"
+      (click)="selectPage(currentPage - 1)"
+    >
+      <a type="button" class="page-link">
+        <span> < </span>
+      </a>
+    </li>
+    <li
+      class="page-item"
+      [ngClass]="{ active: page === currentPage }"
+      *ngFor="let page of pages"
+      (click)="selectPage(page)"
+    >
+      <a type="button" class="page-link">{{ page }}</a>
+    </li>
+    <li
+      class="page-item"
+      [ngClass]="{ disabled: currentPage === pages[pages.length - 1] }"
+      (click)="selectPage(currentPage + 1)"
+    >
+      <a type="button" class="page-link"> <span> > </span> </a>
+    </li>
+  </ul>
+</div>

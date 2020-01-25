@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row" *ngIf="countries">
+    <app-country-list-item
+      class="col-sm-6 cursor-pointer"
+      *ngFor="let country of countries"
+      [country]="country"
+      (clicked)="showDetails(country.alpha3Code)"
+    ></app-country-list-item>
+  </div>
+  <app-pagination
+    *ngIf="totalItems"
+    [totalItems]="totalItems"
+    [itemsPerPage]="itemsPerPage"
+    (skip)="skipItems($event)"
+  ></app-pagination>
+</div>

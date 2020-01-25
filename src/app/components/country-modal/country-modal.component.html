@@ -1,0 +1,46 @@
+<div class="modal-header">
+  <h4 class="modal-title">Country details</h4>
+  <button
+    type="button"
+    class="close"
+    aria-label="Close"
+    (click)="activeModal.dismiss('Cross click')"
+  >
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <div class="row">
+    <div class="col-4">Name:</div>
+    <div class="col-8">
+      <strong>{{ countryDetails.name }}</strong> ({{
+        countryDetails.nativeName
+      }})
+    </div>
+    <div class="col-4">Region:</div>
+    <div class="col-8">
+      {{ countryDetails.region }} ({{ countryDetails.subRegion }})
+    </div>
+    <div class="col-4">Capital:</div>
+    <div class="col-8">{{ countryDetails.capital }}</div>
+    <div class="col-4">Population:</div>
+    <div class="col-8">{{ countryDetails.population }}</div>
+    <hr />
+    <div class="col-4">Bordering Countries:</div>
+    <div class="col-8">
+      <div *ngFor="let country of countryDetails.borderingCountries">
+        {{ country.name }}
+        <img [src]="country.flag" class="rounded" height="20" alt="no pic" />
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal-footer">
+  <button
+    type="button"
+    class="btn btn-outline-dark"
+    (click)="activeModal.close('Close click')"
+  >
+    Close
+  </button>
+</div>

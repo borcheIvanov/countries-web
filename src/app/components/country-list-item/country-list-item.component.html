@@ -1,0 +1,12 @@
+<div class="country-card my-2" (click)="clicked.emit()">
+  <div class="vertical-align-center text-dark">
+    <strong>{{ country.name }}</strong>
+  </div>
+  <img
+    class="rounded"
+    [src]="country.flag"
+    alt="flag not found"
+    height="50"
+    width="auto"
+  />
+</div>
