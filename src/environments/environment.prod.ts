@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiEndpoint: '//localhost:5000'
+  apiEndpoint: '//countries-api.azurewebsites.net'
 };

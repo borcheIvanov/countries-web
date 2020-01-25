@@ -1,0 +1,5 @@
+{
+    "appService.showBuildDuringDeployPrompt": false,
+    "appService.defaultWebAppToDeploy": "/subscriptions/067b3690-7624-4347-b2d4-097729c15d81/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/countries-app",
+    "appService.deploySubpath": "dist/countries-web"
+}
